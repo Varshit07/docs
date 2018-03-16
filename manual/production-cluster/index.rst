@@ -1,16 +1,16 @@
 .. .. meta::
-   :description: Introduction to Hasura's paid clusters/plans
-   :keywords: hasura, cluster, paid plans, paid
+   :description: Introduction to Hasura's production clusters/plans
+   :keywords: hasura, cluster, production plans, prod, prod plans
 
-Paid Clusters
-=============
+Production Cluster
+==================
 ..
-   - What is a paid cluster?
+   - What is a prod cluster?
    - Outline - creating and modifying a cluster
    - 
    - Provisioning
 
-A paid cluster is a Hasura cluster running on dedicated infrastructure managed
+A production cluster is a Hasura cluster running on the production tier i.e. dedicated infrastructure managed
 by Hasura.
 
 Currently only Digital Ocean is supported as a cloud provider. Other
@@ -21,14 +21,14 @@ version controlled in a Hasura project.
 
 .. note::
 
-  Details of offered paid plans can be found here - `Hasura pricing <https://hasura.io/pricing>`_.
+  Details of offered production plans can be found here - `Hasura pricing <https://hasura.io/pricing>`_.
 
 
 .. toctree::
   :maxdepth: 1
   :titlesonly:
 
-  create-paid-cluster
+  create-production-cluster
   cluster-config
   cluster-maintenance
   sample-cluster-configs

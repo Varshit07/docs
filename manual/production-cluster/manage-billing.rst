@@ -17,4 +17,4 @@ Modifying billing information
 Transfer ownership of a cluster
 -------------------------------
 
-Drop a note to support@hasura.io from your registed email address, copyig the user to whom you want to transfer ownership to.
+Drop a note to support@hasura.io from your registed email address, copyig the new owner.
