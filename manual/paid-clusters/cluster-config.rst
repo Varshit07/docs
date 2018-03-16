@@ -2,24 +2,66 @@
    :description: How to modify cluster configuration
    :keywords: hasura, cluster, paid plans, modify
 
-Managing cluster configuration
-==============================
+Managing a cluster
+==================
 
-This section is applicable to Hasura's paid clusters or clusters setup on infrastructure not managed by Hasura like GKE, Azure, etc.
-A cluster's initial configuration can be set by defining it in `clusters.yaml`. Subsequent changes to a cluster's configuration are also made in the same way - by modifying the config file and applying it to the cluster.
+List existing clusters
+----------------------
+To list all the existing clusters and see the overall status, run:
 
-Let's take a look at all the use-cases for setting or modifying a cluster's configuration.
+.. code-block:: bash
 
-Create a new cluster
---------------------
+   $ hasura cluster list # or hasura clr ls in short
+
+
+To see the status of an existing cluster
+----------------------------------------
+Make sure you are in the relevant project directory:
+
+.. code-block:: bash
+
+   $ hasura cluster status -c <cluster-alias>
+
 
 Scale a cluster
 ---------------
+A cluster's initial configuration is set in ``clusters.yaml``.
 
-Modify node configuration
--------------------------
+Subsequent changes to a cluster's configuration can be made by modifying the
+infra spec in this file (:doc:`refer here <./reference-clusters-yaml>`), or by
+using the `Pricing Calculator <https://hasura.io/pricing>`_, and then applying
+these changes.
 
-Isolate database to a node
---------------------------
+.. note::
+
+   On Digital Ocean, a cluster cannot be scaled down below the initial
+   configuration of the cluster.
 
 
+Using the pricing calculator
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Choose a configuration using the `Pricing Calculator
+  <https://hasura.io/pricing>`_.
+
+* Click the "Install using CLI" button, and copy the generated infra code.
+
+* Run the command:
+
+.. code-block:: bash
+
+   $ hasura cluster upgrade -c <cluster-alias>
+
+
+Delete a cluster
+----------------
+To delete a cluster:
+
+.. code-block:: bash
+
+   $ hasura cluster delete <cluster-name>
+
+Example:
+
+.. code-block:: bash
+
+   $ hasura cluster delete ambitious93
