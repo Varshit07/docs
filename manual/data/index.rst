@@ -6,7 +6,7 @@
 Database
 ========
 
-Hasura comes with data APIs which run on top of a **Postgres database** to store and retrieve data. To fetch associated data, one can define relationships on
+Hasura comes with data APIs which run on top of a **Postgres database** to store and retrieve data. To fetch associated data, one can define relationships between
 tables. Permissions can then be used to authorize the access to data based on
 user roles.
 
